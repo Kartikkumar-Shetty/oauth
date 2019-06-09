@@ -46,7 +46,7 @@ func main() {
 
 	})
 	http.HandleFunc("/start", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "https://login.microsoftonline.com/common/oauth2/authorize?client_id=480369ac-2491-4cda-9369-95e093e9e2c2&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8081%2Fpath&response_mode=query&resource=https%3A%2F%2Fmanagement.azure.com%2F&state=12345", http.StatusSeeOther)
+		http.Redirect(w, r, "https://login.microsoftonline.com/common/oauth2/authorize?client_id=xxxxxxxxxx-xxxxxxx-x-xxx&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A8081%2Fpath&response_mode=query&resource=https%3A%2F%2Fmanagement.azure.com%2F&state=12345", http.StatusSeeOther)
 		fmt.Fprintf(w, "Hello, %q", html.EscapeString(r.URL.Path))
 	})
 
